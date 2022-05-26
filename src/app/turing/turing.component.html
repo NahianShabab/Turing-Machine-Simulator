@@ -1,0 +1,10 @@
+<ng-container *ngFor="let t of turingMachine.tape">
+    <cell [cellText]="t"></cell>
+</ng-container>
+<div *ngIf="turingMachine.currentState===turingMachine.acceptState">
+    accepted
+</div>
+
+<div *ngIf="turingMachine.currentState===turingMachine.rejectState">
+    rejected
+</div>
